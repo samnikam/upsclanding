@@ -1,0 +1,103 @@
+'use client';
+
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from '@/components/ui/accordion';
+
+export function FaqSection() {
+  const faqs = [
+    {
+      question: 'What is the eligibility criteria for UPSC CSE?',
+      answer: 'You must be an Indian citizen, have completed 21 years of age, and possess a Bachelor\'s degree from a recognized university. Maximum age limit is 32 years (with age relaxations for SC/ST/OBC categories).'
+    },
+    {
+      question: 'How long should I prepare for UPSC exam?',
+      answer: 'Typically, 1-2 years of dedicated preparation is recommended for UPSC CSE. However, it varies based on individual background, speed of learning, and previous knowledge. Our academy provides customized learning paths for different timelines.'
+    },
+    {
+      question: 'Are classes available in both online and offline modes?',
+      answer: 'Yes, we offer flexible learning options. You can choose online classes, offline classes at our centers, or a hybrid approach. All students get access to recorded lectures and study materials.'
+    },
+    {
+      question: 'What is your success rate and placement assistance?',
+      answer: 'We have a success rate of over 40% (significantly above national average of 0.2%). We provide interview preparation and coaching, career guidance, and direct placement assistance post-selection.'
+    },
+    {
+      question: 'Do you provide study materials and test series?',
+      answer: 'Yes, comprehensive study materials in both Hindi and English are provided. We offer 100+ full-length mock tests, daily MCQ practice, and detailed performance analytics.'
+    },
+    {
+      question: 'Can I get a refund if I am not satisfied?',
+      answer: 'We offer a 7-day money-back guarantee if you\'re not satisfied with the course. Additionally, if you don\'t clear Prelims after completing our course, we offer a free repeat batch.'
+    },
+    {
+      question: 'How much does the course cost?',
+      answer: 'Our courses range from ₹20,000 for test series to ₹99,999 for the complete UPSC package. We also offer EMI options and scholarships for meritorious candidates.'
+    },
+    {
+      question: 'What support is available after enrollment?',
+      answer: 'We provide lifetime support including access to updated study materials, recording of new classes, priority doubt clearing sessions, and continuous mentorship until you clear the exam.'
+    }
+  ];
+
+  return (
+    <section className="py-16 md:py-24 px-4 bg-white">
+      <div className="max-w-4xl mx-auto">
+        <div className="text-center space-y-4 mb-16">
+          <h2 className="font-serif text-3xl md:text-4xl font-bold text-primary">
+            Frequently Asked Questions
+          </h2>
+          <p className="text-lg text-muted-foreground">
+            Find answers to common questions about UPSC preparation and our courses
+          </p>
+        </div>
+
+        <Accordion type="single" collapsible className="w-full space-y-3">
+          {faqs.map((faq, index) => (
+            <AccordionItem 
+              key={index} 
+              value={`item-${index}`}
+              className="border border-border rounded-lg px-6 data-[state=open]:border-accent transition-colors"
+            >
+              <AccordionTrigger className="hover:no-underline py-4">
+                <span className="text-left font-semibold text-foreground text-base">
+                  {faq.question}
+                </span>
+              </AccordionTrigger>
+              <AccordionContent className="text-muted-foreground leading-relaxed">
+                {faq.answer}
+              </AccordionContent>
+            </AccordionItem>
+          ))}
+        </Accordion>
+
+        {/* Still have questions */}
+        <div className="mt-16 bg-secondary rounded-2xl p-8 text-center space-y-4">
+          <h3 className="text-2xl font-bold font-serif text-primary">
+            Still have questions?
+          </h3>
+          <p className="text-muted-foreground mb-6">
+            Our experts are ready to help you. Reach out to us anytime.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+            <a 
+              href="tel:+919876543210"
+              className="px-8 py-3 bg-primary hover:bg-primary/90 text-white rounded-lg font-semibold transition-colors"
+            >
+              Call Us: +91 98765 43210
+            </a>
+            <a 
+              href="mailto:info@upscacademy.com"
+              className="px-8 py-3 border-2 border-primary text-primary hover:bg-primary/5 rounded-lg font-semibold transition-colors"
+            >
+              Email: info@upscacademy.com
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
