@@ -25,16 +25,16 @@ export function CoursesSection() {
       highlighted: false
     },
     {
-      title: 'Prelims Intensive',
-      duration: '6 Months',
-      price: '₹35,000',
-      level: 'Graduates',
+      title: 'Live GS Foundation 2027',
+      duration: '18 Months',
+      price: '₹55,000',
+      level: 'UPSC 2027 Aspirants',
       features: [
-        'Prelims-Focused Strategy',
-        'Current Affairs Updates',
-        'Daily MCQ Practice',
-        'Expert Guidance',
-        'Performance Analytics'
+        'Live Interactive GS Classes',
+        'Personalized Study Plan',
+        'Daily Answer Writing',
+        'NCERT + Standard Books',
+        'Comprehensive Test Series'
       ],
       highlighted: true
     },
@@ -98,11 +98,10 @@ export function CoursesSection() {
           {courses.map((course, index) => (
             <div
               key={index}
-              className={`rounded-2xl overflow-hidden transition-all duration-300 ${
-                course.highlighted
+              className={`rounded-2xl overflow-hidden transition-all duration-300 ${course.highlighted
                   ? 'md:col-span-2 lg:col-span-1 border-4 border-accent shadow-2xl transform scale-105 bg-white'
                   : 'border border-border bg-white hover:shadow-lg'
-              }`}
+                }`}
             >
               {course.highlighted && (
                 <div className="bg-accent text-primary py-2 px-4 text-center font-bold text-sm">
@@ -138,11 +137,10 @@ export function CoursesSection() {
 
                 <Button
                   onClick={scrollToForm}
-                  className={`w-full rounded-lg font-bold py-2 cursor-pointer ${
-                    course.highlighted
+                  className={`w-full rounded-lg font-bold py-2 cursor-pointer ${course.highlighted
                       ? 'bg-accent hover:bg-accent/90 text-primary'
                       : 'bg-primary hover:bg-primary/90 text-white'
-                  }`}
+                    }`}
                 >
                   Enroll Now
                 </Button>

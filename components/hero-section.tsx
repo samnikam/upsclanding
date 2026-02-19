@@ -9,6 +9,7 @@ export function HeroSection() {
     name: '',
     phone: '',
     email: '',
+    targetYear: '',
     course: ''
   });
   const [submitted, setSubmitted] = useState(false);
@@ -23,13 +24,14 @@ export function HeroSection() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    if (formData.name && formData.phone && formData.email && formData.course) {
+    if (formData.name && formData.phone && formData.email && formData.targetYear && formData.course) {
       setSubmitted(true);
       setTimeout(() => {
         setFormData({
           name: '',
           phone: '',
           email: '',
+          targetYear: '',
           course: ''
         });
         setSubmitted(false);
@@ -38,7 +40,7 @@ export function HeroSection() {
   };
 
   return (
-    <section id="enquiry" className="relative pt-32 pb-28 px-4 overflow-hidden bg-gradient-to-br from-primary via-[#0d2557] to-primary">
+    <section id="enquiry" className="relative pt-16 pb-28 px-4 overflow-hidden bg-[#003060]">
       {/* Enhanced Animated Background Elements */}
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute top-20 left-10 w-96 h-96 bg-accent/10 rounded-full blur-3xl animate-pulse"></div>
@@ -178,7 +180,7 @@ export function HeroSection() {
 
                   <div>
                     <label htmlFor="phone" className="block text-sm font-semibold text-gray-700 mb-1.5">
-                      Mobile Number <span className="text-accent">*</span>
+                      WhatsApp Number <span className="text-accent">*</span>
                     </label>
                     <input
                       type="tel"
@@ -187,8 +189,8 @@ export function HeroSection() {
                       value={formData.phone}
                       onChange={handleChange}
                       required
-                      placeholder="+91 "
-                      className="w-full px-4 py-3 border-2 border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-accent/50 focus:border-accent placeholder:text-gray-400 transition-all"
+                      placeholder="Enter 10 digit number"
+                      className="w-full px-4 py-3 border-2 border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-accent/50 focus:border-accent placeholder:text-gray-400 transition-all font-medium"
                     />
                   </div>
 
@@ -204,8 +206,28 @@ export function HeroSection() {
                       onChange={handleChange}
                       required
                       placeholder="you@example.com"
-                      className="w-full px-4 py-3 border-2 border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-accent/50 focus:border-accent placeholder:text-gray-400 transition-all"
+                      className="w-full px-4 py-3 border-2 border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-accent/50 focus:border-accent placeholder:text-gray-400 transition-all font-medium"
                     />
+                  </div>
+
+                  <div>
+                    <label htmlFor="targetYear" className="block text-sm font-semibold text-gray-700 mb-1.5">
+                      Target Attempt Year <span className="text-accent">*</span>
+                    </label>
+                    <select
+                      id="targetYear"
+                      name="targetYear"
+                      value={formData.targetYear}
+                      onChange={handleChange}
+                      required
+                      className="w-full px-4 py-3 border-2 border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-accent/50 focus:border-accent text-gray-700 transition-all font-medium"
+                    >
+                      <option value="">Select year</option>
+                      <option value="2025">UPSC 2025</option>
+                      <option value="2026">UPSC 2026</option>
+                      <option value="2027">UPSC 2027</option>
+                      <option value="beyond">2028 or Beyond</option>
+                    </select>
                   </div>
 
                   <div>
@@ -221,18 +243,18 @@ export function HeroSection() {
                       className="w-full px-4 py-3 border-2 border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-accent/50 focus:border-accent text-gray-700 transition-all"
                     >
                       <option value="">Select course</option>
-                      <option value="prelims">Prelims Foundation</option>
-                      <option value="mains">Mains Comprehensive</option>
-                      <option value="complete">Complete IAS Program</option>
-                      <option value="optional">Optional Subject</option>
+                      <option value="gs-foundation">GS Foundation Batch</option>
+                      <option value="target-2027">UPSC 2027 Strategy Batch</option>
+                      <option value="mentorship">Personal Mentorship</option>
+                      <option value="csat">CSAT Exclusive</option>
                     </select>
                   </div>
 
                   <Button
                     type="submit"
-                    className="w-full bg-accent hover:bg-accent/90 text-primary font-bold py-4 rounded-lg text-base mt-6 shadow-lg hover:shadow-xl transition-all hover:scale-105 flex items-center justify-center gap-2 group"
+                    className="w-full bg-accent hover:bg-accent/90 text-primary font-bold py-4 rounded-lg text-base mt-6 shadow-lg hover:shadow-xl transition-all hover:scale-105 flex items-center justify-center gap-2 group cursor-pointer"
                   >
-                    Get Free Demo Class
+                    Get Free Demo + Strategy Plan
                     <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                   </Button>
 
