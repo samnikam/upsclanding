@@ -22,23 +22,25 @@ export default function Home() {
   }, []);
 
   return (
-    <main className="overflow-hidden">
+    <>
       <NotificationBanner />
       <Navbar />
-      <HeroSection />
-      <TrustBar />
-      <WhyChooseUs />
-      <EducatorsSection />
-      <CoursesSection />
-      <TestimonialsSection />
-      <FaqSection />
-      <StepByStep />
-      <Footer />
-      <StickyBottomBar />
-      <WhatsAppFloat />
+      <main className="overflow-x-hidden">
+        <HeroSection />
+        <TrustBar />
+        <WhyChooseUs />
+        <EducatorsSection />
+        <CoursesSection />
+        <TestimonialsSection />
+        <FaqSection />
+        <StepByStep />
+        <Footer />
+        <StickyBottomBar />
+        <WhatsAppFloat />
 
-      {/* Add padding to bottom for mobile sticky bar */}
-      <div className="md:hidden h-20"></div>
-    </main>
+        {/* Add padding to bottom for mobile sticky bar */}
+        <div className="md:hidden h-20"></div>
+      </main>
+    </>
   );
 }
