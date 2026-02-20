@@ -50,15 +50,16 @@ export function FaqSection() {
           <h2 className="font-serif text-3xl md:text-4xl font-bold text-primary">
             Frequently Asked Questions
           </h2>
-          <p className="text-lg text-muted-foreground">
+          <div className="w-16 h-1 bg-accent mx-auto rounded-full"></div>
+          <p className="text-base text-gray-500 max-w-2xl mx-auto font-medium">
             Find answers to common questions about UPSC preparation and our courses
           </p>
         </div>
 
         <Accordion type="single" collapsible className="w-full space-y-3">
           {faqs.map((faq, index) => (
-            <AccordionItem 
-              key={index} 
+            <AccordionItem
+              key={index}
               value={`item-${index}`}
               className="border border-border rounded-lg px-6 data-[state=open]:border-accent transition-colors"
             >
@@ -83,13 +84,13 @@ export function FaqSection() {
             Our experts are ready to help you. Reach out to us anytime.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <a 
+            <a
               href="tel:+919876543210"
               className="px-8 py-3 bg-primary hover:bg-primary/90 text-white rounded-lg font-semibold transition-colors"
             >
               Call Us: +91 98765 43210
             </a>
-            <a 
+            <a
               href="mailto:info@upscacademy.com"
               className="px-8 py-3 border-2 border-primary text-primary hover:bg-primary/5 rounded-lg font-semibold transition-colors"
             >

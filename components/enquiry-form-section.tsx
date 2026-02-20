@@ -6,12 +6,12 @@ import { Check } from 'lucide-react';
 
 export function EnquiryFormSection() {
   const [formData, setFormData] = useState({
-    fullName: '',
-    mobile: '',
+    name: '',
     email: '',
-    currentStage: '',
-    state: '',
-    preferredBatch: ''
+    contact: '',
+    aspirantType: '',
+    attemptYear: '',
+    program: ''
   });
   const [submitted, setSubmitted] = useState(false);
 
@@ -25,16 +25,16 @@ export function EnquiryFormSection() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    if (formData.fullName && formData.mobile && formData.email && formData.currentStage && formData.state && formData.preferredBatch) {
+    if (formData.name && formData.email && formData.contact && formData.aspirantType && formData.attemptYear && formData.program) {
       setSubmitted(true);
       setTimeout(() => {
         setFormData({
-          fullName: '',
-          mobile: '',
+          name: '',
           email: '',
-          currentStage: '',
-          state: '',
-          preferredBatch: ''
+          contact: '',
+          aspirantType: '',
+          attemptYear: '',
+          program: ''
         });
         setSubmitted(false);
       }, 3000);
@@ -62,8 +62,8 @@ export function EnquiryFormSection() {
           <div className="inline-block bg-accent/10 px-4 py-2 rounded-full mb-4">
             <span className="text-sm font-bold text-accent uppercase tracking-wide">Limited Seats Available</span>
           </div>
-          <h2 className="font-serif text-4xl md:text-5xl font-bold text-primary mb-4">
-            Start Your IAS Journey Today
+          <h2 className="font-serif text-4xl md:text-5xl font-bold text-primary mb-4 leading-tight">
+            Schedule Your 1:1 Free Session with Faculty
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
             Book your free consultation with our expert mentors and get a personalized roadmap to success
@@ -119,40 +119,24 @@ export function EnquiryFormSection() {
             ) : (
               <form onSubmit={handleSubmit} className="space-y-5">
                 <div>
-                  <label htmlFor="fullName" className="block text-sm font-semibold text-foreground mb-2">
-                    Full Name <span className="text-accent">*</span>
+                  <label htmlFor="name" className="block text-sm font-semibold text-foreground mb-2">
+                    Name <span className="text-accent">*</span>
                   </label>
                   <input
                     type="text"
-                    id="fullName"
-                    name="fullName"
-                    value={formData.fullName}
+                    id="name"
+                    name="name"
+                    value={formData.name}
                     onChange={handleChange}
                     required
-                    placeholder="Enter your full name"
-                    className="w-full px-4 py-3 border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-accent/50 focus:border-accent placeholder:text-muted-foreground"
-                  />
-                </div>
-
-                <div>
-                  <label htmlFor="mobile" className="block text-sm font-semibold text-foreground mb-2">
-                    Mobile Number <span className="text-accent">*</span>
-                  </label>
-                  <input
-                    type="tel"
-                    id="mobile"
-                    name="mobile"
-                    value={formData.mobile}
-                    onChange={handleChange}
-                    required
-                    placeholder="+91 "
+                    placeholder="Enter your name"
                     className="w-full px-4 py-3 border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-accent/50 focus:border-accent placeholder:text-muted-foreground"
                   />
                 </div>
 
                 <div>
                   <label htmlFor="email" className="block text-sm font-semibold text-foreground mb-2">
-                    Email Address <span className="text-accent">*</span>
+                    Email <span className="text-accent">*</span>
                   </label>
                   <input
                     type="email"
@@ -167,70 +151,83 @@ export function EnquiryFormSection() {
                 </div>
 
                 <div>
-                  <label htmlFor="currentStage" className="block text-sm font-semibold text-foreground mb-2">
-                    Current Stage <span className="text-accent">*</span>
+                  <label htmlFor="contact" className="block text-sm font-semibold text-foreground mb-2">
+                    Contact <span className="text-accent">*</span>
+                  </label>
+                  <input
+                    type="tel"
+                    id="contact"
+                    name="contact"
+                    value={formData.contact}
+                    onChange={handleChange}
+                    required
+                    placeholder="Enter your contact number"
+                    className="w-full px-4 py-3 border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-accent/50 focus:border-accent placeholder:text-muted-foreground"
+                  />
+                </div>
+
+                <div>
+                  <label htmlFor="aspirantType" className="block text-sm font-semibold text-foreground mb-2">
+                    Type of Aspirants <span className="text-accent">*</span>
                   </label>
                   <select
-                    id="currentStage"
-                    name="currentStage"
-                    value={formData.currentStage}
+                    id="aspirantType"
+                    name="aspirantType"
+                    value={formData.aspirantType}
                     onChange={handleChange}
                     required
                     className="w-full px-4 py-3 border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-accent/50 focus:border-accent text-muted-foreground"
                   >
-                    <option value="">Select your stage</option>
-                    <option value="12th">12th Pass</option>
-                    <option value="graduation">Graduation</option>
-                    <option value="postgrad">Post Graduation</option>
+                    <option value="">Select type</option>
+                    <option value="full-time">Full Time Preparation</option>
+                    <option value="college">College Going Student</option>
                     <option value="working">Working Professional</option>
                   </select>
                 </div>
 
                 <div>
-                  <label htmlFor="state" className="block text-sm font-semibold text-foreground mb-2">
-                    State <span className="text-accent">*</span>
+                  <label htmlFor="attemptYear" className="block text-sm font-semibold text-foreground mb-2">
+                    Year of Attempt <span className="text-accent">*</span>
                   </label>
                   <select
-                    id="state"
-                    name="state"
-                    value={formData.state}
+                    id="attemptYear"
+                    name="attemptYear"
+                    value={formData.attemptYear}
                     onChange={handleChange}
                     required
                     className="w-full px-4 py-3 border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-accent/50 focus:border-accent text-muted-foreground"
                   >
-                    <option value="">Select your state</option>
-                    <option value="delhi">Delhi</option>
-                    <option value="mumbai">Mumbai</option>
-                    <option value="bangalore">Bangalore</option>
-                    <option value="other">Other</option>
+                    <option value="">Select year</option>
+                    <option value="2027">2027</option>
+                    <option value="2028">2028</option>
+                    <option value="2029-above">2029 & above</option>
                   </select>
                 </div>
 
                 <div>
-                  <label htmlFor="preferredBatch" className="block text-sm font-semibold text-foreground mb-2">
-                    Preferred Batch <span className="text-accent">*</span>
+                  <label htmlFor="program" className="block text-sm font-semibold text-foreground mb-2">
+                    Choose Your Interested Program <span className="text-accent">*</span>
                   </label>
                   <select
-                    id="preferredBatch"
-                    name="preferredBatch"
-                    value={formData.preferredBatch}
+                    id="program"
+                    name="program"
+                    value={formData.program}
                     onChange={handleChange}
                     required
                     className="w-full px-4 py-3 border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-accent/50 focus:border-accent text-muted-foreground"
                   >
-                    <option value="">Select batch</option>
-                    <option value="morning">Morning Batch</option>
-                    <option value="evening">Evening Batch</option>
-                    <option value="online">Online Batch</option>
-                    <option value="weekend">Weekend Batch</option>
+                    <option value="">Select program</option>
+                    <option value="upsc-gs">UPSC GS Foundation Batch</option>
+                    <option value="mpsc">MPSC Integrated Batch</option>
+                    <option value="mentorship">Personal Mentorship Program</option>
                   </select>
                 </div>
 
                 <Button
                   type="submit"
-                  className="w-full bg-accent hover:bg-accent/90 text-primary font-bold py-3 rounded-lg text-base mt-6"
+                  className="w-full bg-accent hover:bg-accent/90 text-primary font-bold py-4 rounded-lg text-sm md:text-base mt-6 shadow-lg hover:shadow-xl transition-all hover:scale-105"
                 >
-                  Get Free Consultation
+                  Register Now
                 </Button>
 
                 <p className="text-xs text-center text-muted-foreground">

@@ -1,74 +1,102 @@
-import { Star } from 'lucide-react';
+'use client';
+
+import { Star, Quote } from 'lucide-react';
+import Image from 'next/image';
+
+const testimonials = [
+  {
+    name: 'Parsanjeet Kour',
+    rank: 'AIR 11, UPSC CSE 2022',
+    achievement: 'IAS Officer',
+    quote: 'The personalized guidance and strategy sessions were instrumental in my journey. The focus on analytical writing and current affairs simplified the most complex topics.',
+    image: '/1up.jpg',
+    rating: 5
+  },
+  {
+    name: 'Waseem Ahmad Bhat',
+    rank: 'AIR 07, UPSC CSE 2022',
+    achievement: 'IAS Officer',
+    quote: 'Regular mock tests and detailed feedback helped me identify my weak areas early on. The mentorship here is truly dedicated to student success.',
+    image: '/2up.jpg',
+    rating: 5
+  },
+  {
+    name: 'Nittin Singh',
+    rank: 'AIR 32, UPSC CSE 2022',
+    achievement: 'IAS Officer',
+    quote: 'I found the study material and the teaching methodology very effective. It provided the clarity I needed to navigate the vast syllabus with confidence.',
+    image: '/3up.jpg',
+    rating: 5
+  }
+];
 
 export function TestimonialsSection() {
-  const testimonials = [
-    {
-      name: 'Aditya Srivastava',
-      rank: 'AIR 01, UPSC CSE 2023',
-      achievement: 'IAS Officer',
-      quote: 'The personalized guidance and strategy sessions were instrumental in my journey. The focus on analytical writing and current affairs simplified the most complex topics.',
-      rating: 5
-    },
-    {
-      name: 'Animesh Pradhan',
-      rank: 'AIR 02, UPSC CSE 2023',
-      achievement: 'IAS Officer',
-      quote: 'Regular mock tests and detailed feedback helped me identify my weak areas early on. The mentorship here is truly dedicated to student success.',
-      rating: 5
-    },
-    {
-      name: 'Donuru Ananya Reddy',
-      rank: 'AIR 03, UPSC CSE 2023',
-      achievement: 'IAS Officer',
-      quote: 'I found the study material and the teaching methodology very effective. It provided the clarity I needed to navigate the vast syllabus with confidence.',
-      rating: 5
-    }
-  ];
-
   return (
-    <section id="testimonials" className="py-16 md:py-24 px-4 bg-[#F0F7FF]">
-      <div className="max-w-6xl mx-auto">
+    <section id="testimonials" className="py-24 bg-[#f8fbff] relative overflow-hidden text-center">
+      {/* Background Decor */}
+      <div className="absolute top-0 right-0 w-[400px] h-[400px] bg-accent/5 rounded-full blur-[100px] -translate-y-1/2 translate-x-1/2"></div>
+
+      <div className="max-w-7xl mx-auto px-4 relative z-10">
         <div className="text-center space-y-4 mb-16">
           <h2 className="font-serif text-3xl md:text-4xl font-bold text-primary">
             Success Stories
           </h2>
-          <p className="text-lg text-primary/70 max-w-2xl mx-auto font-medium">
-            Hear from our students who've successfully cleared UPSC and secured their dream positions
+          <div className="w-16 h-1 bg-accent mx-auto rounded-full"></div>
+          <p className="text-base text-gray-500 max-w-2xl mx-auto font-medium">
+            Join the ranks of our successful candidates who turned their IAS dreams into reality
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {testimonials.map((testimonial, index) => (
             <div
               key={index}
-              className="bg-white rounded-2xl p-8 border border-blue-100 shadow-sm hover:shadow-md transition-all duration-300"
+              className="group bg-white rounded-3xl p-6 border border-gray-100 shadow-[0_10px_30px_-10px_rgba(0,0,0,0.05)] hover:shadow-[0_20px_40px_-10px_rgba(0,0,0,0.08)] transition-all duration-300 hover:-translate-y-1.5 flex flex-col text-left relative overflow-hidden"
             >
-              {/* Rating */}
-              <div className="flex gap-1 mb-4">
-                {Array.from({ length: testimonial.rating }).map((_, i) => (
-                  <Star key={i} size={18} fill="#F5A623" className="text-[#F5A623]" />
-                ))}
+              {/* Quote Icon - Smaller */}
+              <div className="absolute top-4 right-6 text-slate-50 group-hover:text-accent/5 transition-colors">
+                <Quote size={40} fill="currentColor" />
               </div>
 
-              {/* Quote */}
-              <p className="text-primary/90 leading-relaxed mb-6 italic font-medium">
-                "{testimonial.quote}"
-              </p>
+              <div className="relative z-10 flex flex-col h-full">
+                {/* Rating - Smaller */}
+                <div className="flex gap-1 mb-4">
+                  {Array.from({ length: testimonial.rating }).map((_, i) => (
+                    <Star key={i} size={12} fill="#F5A623" className="text-[#F5A623]" />
+                  ))}
+                </div>
 
-              {/* Divider */}
-              <div className="h-px bg-blue-50 mb-6"></div>
+                {/* Quote - Smaller font */}
+                <p className="text-gray-600 text-sm leading-relaxed mb-6 italic font-medium">
+                  "{testimonial.quote}"
+                </p>
 
-              {/* Author Info */}
-              <div>
-                <p className="font-bold text-primary mb-1 text-lg">
-                  {testimonial.name}
-                </p>
-                <p className="text-accent font-bold text-sm mb-1">
-                  {testimonial.rank}
-                </p>
-                <p className="text-primary/60 text-sm font-semibold">
-                  {testimonial.achievement}
-                </p>
+                {/* Divider - Pushed to bottom */}
+                <div className="mt-auto">
+                  <div className="h-px w-full bg-gray-50 mb-6"></div>
+
+                  {/* Author Info - Enhanced Size */}
+                  <div className="flex items-center gap-4">
+                    <div className="relative w-20 h-20 rounded-2xl overflow-hidden border-2 border-accent/10 flex-shrink-0 group-hover:scale-110 transition-transform shadow-sm">
+                      <img
+                        src={testimonial.image}
+                        alt={testimonial.name}
+                        className="w-full h-full object-cover"
+                      />
+                    </div>
+                    <div className="space-y-1">
+                      <h4 className="font-bold text-primary text-base leading-tight">
+                        {testimonial.name}
+                      </h4>
+                      <p className="text-accent font-black text-[10px] uppercase tracking-widest mt-0.5">
+                        {testimonial.rank}
+                      </p>
+                      <p className="text-gray-400 text-[10px] font-bold">
+                        {testimonial.achievement}
+                      </p>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           ))}

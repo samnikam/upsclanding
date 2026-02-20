@@ -6,15 +6,15 @@ import { HeroSection } from '@/components/hero-section';
 import { TrustBar } from '@/components/trust-bar';
 import { WhyChooseUs } from '@/components/why-choose-us';
 import { EducatorsSection } from '@/components/educators-section';
-import { CoursesSection } from '@/components/courses-section';
 import { TestimonialsSection } from '@/components/testimonials-section';
 import { FaqSection } from '@/components/faq-section';
-import { StepByStep } from '@/components/step-by-step';
+import { PreparationPhases } from '@/components/preparation-phases';
 import { Footer } from '@/components/footer';
 import { StickyBottomBar } from '@/components/sticky-bottom-bar';
 
 import { NotificationBanner } from '@/components/notification-banner';
 import { WhatsAppFloat } from '@/components/whatsapp-float';
+import { BannerSection } from '@/components/banner-section';
 
 export default function Home() {
   useEffect(() => {
@@ -23,17 +23,16 @@ export default function Home() {
 
   return (
     <>
-      <NotificationBanner />
       <Navbar />
       <main className="overflow-x-hidden">
-        <HeroSection />
+        <BannerSection />
         <TrustBar />
+        <HeroSection />
         <WhyChooseUs />
         <EducatorsSection />
-        <CoursesSection />
+        <PreparationPhases />
         <TestimonialsSection />
         <FaqSection />
-        <StepByStep />
         <Footer />
         <StickyBottomBar />
         <WhatsAppFloat />

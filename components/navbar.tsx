@@ -8,7 +8,7 @@ export function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   const scrollToForm = () => {
-    const formSection = document.getElementById('enquiry');
+    const formSection = document.getElementById('enquiry-form');
     formSection?.scrollIntoView({ behavior: 'smooth' });
     setMobileMenuOpen(false);
   };
@@ -27,33 +27,25 @@ export function Navbar() {
 
           {/* Desktop Menu */}
           <div className="hidden md:flex items-center gap-6 lg:gap-8">
-            <a href="#courses" className="text-foreground hover:text-primary text-sm font-medium transition-colors">
-              Courses
+            <a href="#preparation-phases" className="text-foreground hover:text-primary text-sm font-medium transition-colors">
+              Study Phases
             </a>
-            <a href="#about" className="text-foreground hover:text-primary text-sm font-medium transition-colors">
-              About Us
+            <a href="#why-choose-us" className="text-foreground hover:text-primary text-sm font-medium transition-colors">
+              Why Choose Us
             </a>
             <a href="#testimonials" className="text-foreground hover:text-primary text-sm font-medium transition-colors">
-              Testimonials
+              Success Stories
             </a>
-            <a href="#contact" className="text-foreground hover:text-primary text-sm font-medium transition-colors">
+            <a href="#enquiry-form" className="text-foreground hover:text-primary text-sm font-medium transition-colors">
               Contact
             </a>
           </div>
 
-          {/* Desktop CTA & Phone */}
           <div className="hidden md:flex items-center gap-3 lg:gap-6">
             <a href="tel:+919876543210" className="text-primary font-semibold text-sm hover:text-accent transition-colors hidden lg:block">
               +91 98765 43210
             </a>
             <div className="flex items-center gap-2">
-              <Button
-                className="bg-primary hover:bg-primary/90 text-white rounded-full px-4 py-1.5 text-xs font-bold flex items-center gap-2 cursor-pointer h-9 shadow-md transition-all active:scale-95"
-                onClick={() => window.open('https://play.google.com/store', '_blank')}
-              >
-                <Smartphone size={16} />
-                Download App
-              </Button>
               <Button
                 onClick={scrollToForm}
                 className="bg-accent hover:bg-accent/90 text-primary rounded-full px-5 py-2 text-xs font-bold cursor-pointer h-9"
@@ -78,52 +70,40 @@ export function Navbar() {
           <div className="md:hidden pb-6 border-t border-border animate-in slide-in-from-top-4 duration-300">
             <div className="flex flex-col gap-4 pt-4">
               <a
-                href="#courses"
+                href="#preparation-phases"
                 className="text-foreground hover:text-primary text-sm font-medium p-2 rounded-lg hover:bg-gray-50 transition-colors"
                 onClick={() => setMobileMenuOpen(false)}
               >
-                Courses
+                Study Phases
               </a>
               <a
-                href="#about"
+                href="#why-choose-us"
                 className="text-foreground hover:text-primary text-sm font-medium p-2 rounded-lg hover:bg-gray-50 transition-colors"
                 onClick={() => setMobileMenuOpen(false)}
               >
-                About Us
+                Why Choose Us
               </a>
               <a
                 href="#testimonials"
                 className="text-foreground hover:text-primary text-sm font-medium p-2 rounded-lg hover:bg-gray-50 transition-colors"
                 onClick={() => setMobileMenuOpen(false)}
               >
-                Testimonials
+                Success Stories
               </a>
               <a
-                href="#contact"
+                href="#enquiry-form"
                 className="text-foreground hover:text-primary text-sm font-medium p-2 rounded-lg hover:bg-gray-50 transition-colors"
                 onClick={() => setMobileMenuOpen(false)}
               >
                 Contact
               </a>
 
-              <div className="grid grid-cols-2 gap-3 mt-2 px-1">
-                <Button
-                  className="bg-primary hover:bg-primary/90 text-white rounded-xl w-full font-bold flex items-center justify-center gap-2 cursor-pointer py-6 shadow-lg"
-                  onClick={() => {
-                    window.open('https://play.google.com/store', '_blank');
-                    setMobileMenuOpen(false);
-                  }}
-                >
-                  <Smartphone size={18} />
-                  App
-                </Button>
-                <Button
-                  onClick={scrollToForm}
-                  className="bg-accent hover:bg-accent/90 text-primary rounded-xl w-full font-bold cursor-pointer py-6 shadow-lg"
-                >
-                  Enquire
-                </Button>
-              </div>
+              <Button
+                onClick={scrollToForm}
+                className="bg-accent hover:bg-accent/90 text-primary rounded-xl w-full font-bold cursor-pointer py-6 shadow-lg"
+              >
+                Enquire Now
+              </Button>
 
               <a
                 href="tel:+919876543210"
