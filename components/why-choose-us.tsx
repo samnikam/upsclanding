@@ -95,41 +95,41 @@ const features = [
 
 export function WhyChooseUs() {
   return (
-    <section id="why-choose-us" className="py-24 bg-slate-50 overflow-hidden relative">
+    <section id="why-choose-us" className="py-8 md:py-12 lg:py-24 bg-slate-50 overflow-hidden relative">
       {/* Decorative background elements */}
       <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-accent/30 to-transparent"></div>
 
-      <div className="max-w-7xl mx-auto px-4">
+      <div className="max-w-7xl mx-auto px-3 md:px-4">
         {/* Header section */}
-        <div className="text-center max-w-3xl mx-auto mb-16 space-y-4">
-          <h2 className="font-serif text-3xl md:text-4xl font-bold text-primary">
+        <div className="text-center max-w-3xl mx-auto mb-6 md:mb-10 lg:mb-16 space-y-3 md:space-y-4">
+          <h2 className="font-serif text-2xl md:text-3xl lg:text-4xl font-bold text-primary">
             Why Choose UPSC Academy?
           </h2>
-          <div className="w-16 h-1 bg-accent mx-auto rounded-full"></div>
-          <p className="text-base text-gray-500 max-w-2xl mx-auto font-medium">
+          <div className="w-12 md:w-16 h-1 bg-accent mx-auto rounded-full"></div>
+          <p className="text-sm md:text-base text-gray-500 max-w-2xl mx-auto font-medium px-4">
             "Your Dream, Our Commitment. Step into Administrative Excellence."
           </p>
         </div>
 
         {/* Features Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+        <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 md:gap-6">
           {features.map((feature, idx) => (
             <div
               key={idx}
-              className={`group ${feature.bg} p-6 rounded-3xl border border-white shadow-[0_10px_25px_-10px_rgba(0,0,0,0.03)] hover:shadow-[0_20px_40px_-10px_rgba(0,0,0,0.07)] transition-all duration-300 hover:-translate-y-1.5 flex flex-col justify-between`}
+              className={`group ${feature.bg} p-4 md:p-6 rounded-2xl md:rounded-3xl border border-white shadow-[0_10px_25px_-10px_rgba(0,0,0,0.03)] hover:shadow-[0_20px_40px_-10px_rgba(0,0,0,0.07)] transition-all duration-300 hover:-translate-y-1.5 flex flex-col justify-between`}
             >
               <div>
-                <div className={`w-12 h-12 bg-white ${feature.color} rounded-2xl flex items-center justify-center mb-5 group-hover:scale-110 transition-transform shadow-sm`}>
-                  <feature.icon size={24} />
+                <div className={`w-10 h-10 md:w-12 md:h-12 bg-white ${feature.color} rounded-xl md:rounded-2xl flex items-center justify-center mb-3 md:mb-5 group-hover:scale-110 transition-transform shadow-sm`}>
+                  <feature.icon size={20} className="md:w-6 md:h-6" />
                 </div>
-                <h4 className="text-lg font-bold text-[#002147] mb-2 leading-tight">
+                <h4 className="text-base md:text-lg font-bold text-[#002147] mb-1.5 md:mb-2 leading-tight">
                   {feature.title}
                 </h4>
-                <p className="text-sm text-gray-700/80 leading-relaxed font-semibold">
+                <p className="text-xs md:text-sm text-gray-700/80 leading-relaxed font-semibold">
                   {feature.description}
                 </p>
               </div>
-              <div className="mt-4 flex justify-end opacity-0 group-hover:opacity-100 transition-opacity">
+              <div className="mt-3 md:mt-4 flex justify-end opacity-0 group-hover:opacity-100 transition-opacity">
                 <div className="w-6 h-1 bg-accent/30 rounded-full"></div>
               </div>
             </div>

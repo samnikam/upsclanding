@@ -15,7 +15,7 @@ export function StickyBottomBar() {
           <span className="text-sm">Call Now</span>
         </a>
         <a
-          href="#enquiry"
+          href="#enquiry-form"
           className="flex-1 flex items-center justify-center gap-2 bg-primary hover:bg-primary/90 text-white font-bold py-3 rounded-lg transition-colors"
         >
           <MessageCircle size={20} />
