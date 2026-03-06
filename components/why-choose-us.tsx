@@ -95,20 +95,17 @@ const features = [
 
 export function WhyChooseUs() {
   return (
-    <section id="why-choose-us" className="py-8 md:py-12 lg:py-24 bg-slate-50 overflow-hidden relative">
+    <section id="why-choose-us" className="py-6 md:py-8 lg:py-12 bg-slate-50 overflow-hidden relative">
       {/* Decorative background elements */}
       <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-accent/30 to-transparent"></div>
 
       <div className="max-w-7xl mx-auto px-3 md:px-4">
         {/* Header section */}
-        <div className="text-center max-w-3xl mx-auto mb-6 md:mb-10 lg:mb-16 space-y-3 md:space-y-4">
+        <div className="text-center max-w-3xl mx-auto mb-6 md:mb-8 lg:mb-10 space-y-2 md:space-y-3">
           <h2 className="font-serif text-2xl md:text-3xl lg:text-4xl font-bold text-primary">
-            Why Choose UPSC Academy?
+            Why Choose UPSC GUIDE GS Foundation Batch?
           </h2>
           <div className="w-12 md:w-16 h-1 bg-accent mx-auto rounded-full"></div>
-          <p className="text-sm md:text-base text-gray-500 max-w-2xl mx-auto font-medium px-4">
-            "Your Dream, Our Commitment. Step into Administrative Excellence."
-          </p>
         </div>
 
         {/* Features Grid */}

@@ -1,52 +1,52 @@
 'use client';
 
 import Image from 'next/image';
+import { MessageCircle } from 'lucide-react';
 
 const educators = [
-
-    {
-        name: "Sumit Konde Sir",
-        role: "Geography & Environment Expert",
-        details: "Geography, Environment & Current Affairs Specialist",
-        image: "/sumit-kondesir.png"
-    },
     {
         name: "Akshay Kadam Sir",
-        role: "Science & Technology Expert",
-        details: "Science & Tech, Environment and Ecology Specialist",
+        role: "Indian Polity & Governance",
+        details: "Indian Polity & Governance Expert",
         image: "/akshay-kadam.png"
     },
     {
+        name: "Jawwad Kazi Sir",
+        role: "History Specialist",
+        details: "History (Ancient, Medieval & Modern India)",
+        image: "/jawwad-kazi.png"
+    },
+    {
+        name: "Sumit Konde Sir",
+        role: "Geography & Environment",
+        details: "Geography & Environment Expert",
+        image: "/sumit-kondesir.png"
+    },
+    {
         name: "Dr. Kaustubh Bondre Sir",
-        role: "History & Culture Specialist",
-        details: "Ancient, Medieval & Modern History, Art and Culture",
+        role: "Economy Specialist",
+        details: "Economy Expert",
         image: "/kaustubh-bondre.png"
     },
     {
         name: "Harshal Patil Sir",
-        role: "CSAT & Mathematics Expert",
-        details: "Logical Reasoning, Quantitative Aptitude & Data Interpretation",
+        role: "Science & Technology",
+        details: "Science & Technology Expert",
         image: "/harshal-patil.png"
     },
     {
-        name: "Jawwad Kazi Sir",
-        role: "International Relations Expert",
-        details: "IR, Internal Security and Social Issues Specialist",
-        image: "/jawwad-kazi.png"
-    },
-    {
         name: "Ramesh Shingade Sir",
-        role: "Geography Specialist",
-        details: "Physical Geography, Agriculture and Mapping Expert",
+        role: "Current Affairs & CSAT",
+        details: "Current Affairs & CSAT Specialist",
         image: "/ramesh-shingade.png"
     }
 ];
 
 export function EducatorsSection() {
     return (
-        <section className="py-6 md:py-10 lg:py-12 bg-white overflow-hidden">
+        <section className="py-4 md:py-6 lg:py-8 bg-white overflow-hidden">
             <div className="max-w-5xl mx-auto px-3 md:px-4 sm:px-6 lg:px-8">
-                <div className="text-center max-w-3xl mx-auto mb-6 md:mb-10 lg:mb-16 space-y-3 md:space-y-4">
+                <div className="text-center max-w-3xl mx-auto mb-4 md:mb-6 lg:mb-10 space-y-2 md:space-y-3">
                     <h2 className="font-serif text-2xl md:text-3xl lg:text-4xl font-bold text-primary">
                         Meet Your Educators
                     </h2>
@@ -56,7 +56,7 @@ export function EducatorsSection() {
                     </p>
                 </div>
 
-                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-y-6 md:gap-y-8 lg:gap-y-12 gap-x-6 md:gap-x-8">
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-y-4 md:gap-y-6 lg:gap-y-8 gap-x-6 md:gap-x-8">
                     {educators.map((educator, index) => (
                         <div key={index} className="flex flex-col items-center group">
                             {/* Profile Image Container */}
@@ -73,19 +73,13 @@ export function EducatorsSection() {
 
                             {/* Name Badge */}
                             <div className="relative -mt-6 md:-mt-8 z-10 flex items-center justify-center">
-                                <div className="flex items-stretch shadow-md">
-                                    {/* Left Accent */}
-                                    <div className="w-1 md:w-1.5 bg-[#0B1F4E]/20"></div>
-
-                                    {/* Main Yellow Background */}
-                                    <div className="bg-[#F5A623] py-1.5 px-4 md:py-2 md:px-5 lg:px-6 border-r border-[#0B1F4E]/10">
+                                <div className="flex items-stretch shadow-lg rounded-md overflow-hidden">
+                                    {/* Main Light Blue Background */}
+                                    <div className="bg-blue-50 py-1.5 px-4 md:py-2 md:px-5 lg:px-6 border-2 border-blue-100">
                                         <h3 className="text-xs md:text-sm lg:text-base font-bold text-[#0B1F4E] text-center whitespace-nowrap">
                                             {educator.name}
                                         </h3>
                                     </div>
-
-                                    {/* Right Blue Accent */}
-                                    <div className="w-2 md:w-3 bg-[#002147] border-l border-white/10"></div>
                                 </div>
                             </div>
 
@@ -101,6 +95,19 @@ export function EducatorsSection() {
                             </div>
                         </div>
                     ))}
+                </div>
+
+                {/* WhatsApp CTA */}
+                <div className="mt-6 md:mt-8 text-center">
+                    <a
+                        href="https://wa.me/917887888819"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center gap-3 bg-[#128C7E] hover:bg-[#0B1F4E] text-white font-bold px-6 md:px-8 py-3 md:py-4 rounded-xl transition-all shadow-lg hover:shadow-xl active:scale-95 text-sm md:text-base"
+                    >
+                        <MessageCircle className="w-5 h-5" />
+                        Talk to Your Favourite Educator
+                    </a>
                 </div>
             </div>
         </section>

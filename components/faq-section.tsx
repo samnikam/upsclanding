@@ -10,36 +10,52 @@ import {
 export function FaqSection() {
   const faqs = [
     {
-      question: 'What is the eligibility criteria for UPSC CSE?',
-      answer: 'You must be an Indian citizen, have completed 21 years of age, and possess a Bachelor\'s degree from a recognized university. Maximum age limit is 32 years (with age relaxations for SC/ST/OBC categories).'
+      question: '1. What is the GS Foundation Batch 2027?',
+      answer: 'GS Foundation Batch 2027 is a complete preparation program covering General Studies for both UPSC Prelims & Mains, designed for beginners as well as serious aspirants targeting UPSC CSE 2027.'
     },
     {
-      question: 'How long should I prepare for UPSC exam?',
-      answer: 'Typically, 1-2 years of dedicated preparation is recommended for UPSC CSE. However, it varies based on individual background, speed of learning, and previous knowledge. Our academy provides customized learning paths for different timelines.'
+      question: '2. Who should join this batch?',
+      answer: '• First-time UPSC aspirants\n• College students starting early preparation\n• Working professionals looking for structured guidance\n• Repeaters who want strong conceptual clarity'
     },
     {
-      question: 'Are classes available in both online and offline modes?',
-      answer: 'Yes, we offer flexible learning options. You can choose online classes, offline classes at our centers, or a hybrid approach. All students get access to recorded lectures and study materials.'
+      question: '3. What makes this Foundation Batch different from others?',
+      answer: '• Learn from India\'s Best Faculties & UPSC Rank Holders\n• 550+ Hours of structured classroom teaching\n• Weekly 1:1 Personal Mentorship with Academic Director\n• 40+ Prelims Tests + 20 Mains Answer Writing Tests\n• Hard Copy Notes + Daily DPPs\n\nThis is not just coaching — it\'s a complete preparation ecosystem.'
     },
     {
-      question: 'What is your success rate and placement assistance?',
-      answer: 'We have a success rate of over 40% (significantly above national average of 0.2%). We provide interview preparation and coaching, career guidance, and direct placement assistance post-selection.'
+      question: '4. Is both Prelims and Mains covered in this batch?',
+      answer: 'Yes. The program is fully integrated:\n• Concept building for Prelims\n• Answer writing training for Mains\n• Weekly tests for both stages\n• Continuous performance evaluation'
     },
     {
-      question: 'Do you provide study materials and test series?',
-      answer: 'Yes, comprehensive study materials in both Hindi and English are provided. We offer 100+ full-length mock tests, daily MCQ practice, and detailed performance analytics.'
+      question: '5. How many teaching hours are included?',
+      answer: 'The batch includes 550+ hours of comprehensive classroom teaching, ensuring complete syllabus coverage with depth and clarity.'
     },
     {
-      question: 'Can I get a refund if I am not satisfied?',
-      answer: 'We offer a 7-day money-back guarantee if you\'re not satisfied with the course. Additionally, if you don\'t clear Prelims after completing our course, we offer a free repeat batch.'
+      question: '6. Are NCERTs covered separately?',
+      answer: 'Yes. We provide Special NCERT-Focused Classes to build a strong base before moving to advanced concepts.'
     },
     {
-      question: 'How much does the course cost?',
-      answer: 'Our courses range from ₹20,000 for test series to ₹99,999 for the complete UPSC package. We also offer EMI options and scholarships for meritorious candidates.'
+      question: '7. Will I get study material?',
+      answer: 'Yes, you will receive:\n• Structured Hard Copy Notes\n• Daily Practice Problems (DPP)\n• Lecture Notes\n• Free Access to UPSC GUIDE Publications (Books written by IAS & IPS Officers)'
     },
     {
-      question: 'What support is available after enrollment?',
-      answer: 'We provide lifetime support including access to updated study materials, recording of new classes, priority doubt clearing sessions, and continuous mentorship until you clear the exam.'
+      question: '8. What kind of test series is included?',
+      answer: 'You will get:\n• 40+ Prelims Tests with discussion\n• 20 Mains Answer Writing Tests with evaluation\n• Weekly Prelims & Mains Tests\n• Detailed faculty feedback'
+    },
+    {
+      question: '9. How does the mentorship work?',
+      answer: 'Every student gets:\n• Weekly 1:1 Personal Mentorship Session\n• Strategy building & answer improvement guidance\n• Performance tracking\n• Personalized study plan\n\nThis ensures you never feel lost in your preparation.'
+    },
+    {
+      question: '10. Are recorded lectures available?',
+      answer: 'Yes. Recorded lectures are provided for revision and backup, so you can revisit any topic anytime.'
+    },
+    {
+      question: '11. Is current affairs included?',
+      answer: 'Yes. We provide:\n• Weekly Current Affairs Sessions\n• Monthly Consolidation Sessions\n• Integration with Prelims & Mains'
+    },
+    {
+      question: '12. Is this batch available online or offline?',
+      answer: 'The GS Foundation Batch 2027 is available in Online & Offline modes (as per center availability).'
     }
   ];
 
@@ -85,10 +101,10 @@ export function FaqSection() {
           </p>
           <div className="flex flex-col sm:flex-row gap-3 md:gap-4 justify-center items-center">
             <a
-              href="tel:+919876543210"
+              href="tel:+917887888819"
               className="w-full sm:w-auto px-6 md:px-8 py-2.5 md:py-3 bg-primary hover:bg-primary/90 text-white rounded-lg font-semibold transition-colors text-sm md:text-base"
             >
-              Call Us: +91 98765 43210
+              Call Us: +91 788 788 8819
             </a>
             <a
               href="mailto:info@upscguide.com"

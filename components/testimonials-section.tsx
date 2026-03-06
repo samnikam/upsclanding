@@ -5,19 +5,19 @@ import Image from 'next/image';
 
 const testimonials = [
   {
-    name: 'Parsanjeet Kour',
-    rank: 'AIR 11, UPSC CSE 2022',
-    achievement: 'IAS Officer',
-    quote: 'The personalized guidance and strategy sessions were instrumental in my journey. The focus on analytical writing and current affairs simplified the most complex topics.',
-    image: '/1up.jpg',
-    rating: 5
-  },
-  {
     name: 'Waseem Ahmad Bhat',
     rank: 'AIR 07, UPSC CSE 2022',
     achievement: 'IAS Officer',
     quote: 'Regular mock tests and detailed feedback helped me identify my weak areas early on. The mentorship here is truly dedicated to student success.',
     image: '/2up.jpg',
+    rating: 5
+  },
+  {
+    name: 'Parsanjeet Kour',
+    rank: 'AIR 11, UPSC CSE 2022',
+    achievement: 'IAS Officer',
+    quote: 'The personalized guidance and strategy sessions were instrumental in my journey. The focus on analytical writing and current affairs simplified the most complex topics.',
+    image: '/1up.jpg',
     rating: 5
   },
   {
@@ -32,14 +32,14 @@ const testimonials = [
 
 export function TestimonialsSection() {
   return (
-    <section id="testimonials" className="py-8 md:py-12 lg:py-24 bg-[#f8fbff] relative overflow-hidden text-center">
+    <section id="testimonials" className="pt-4 pb-8 md:pt-6 md:pb-12 lg:pt-8 lg:pb-24 bg-[#f8fbff] relative overflow-hidden text-center">
       {/* Background Decor */}
       <div className="absolute top-0 right-0 w-[400px] h-[400px] bg-accent/5 rounded-full blur-[100px] -translate-y-1/2 translate-x-1/2"></div>
 
       <div className="max-w-7xl mx-auto px-3 md:px-4 relative z-10">
         <div className="text-center space-y-3 md:space-y-4 mb-6 md:mb-10 lg:mb-16">
           <h2 className="font-serif text-2xl md:text-3xl lg:text-4xl font-bold text-primary">
-            Success Stories
+            3 Rank Holders in Top 35
           </h2>
           <div className="w-12 md:w-16 h-1 bg-accent mx-auto rounded-full"></div>
           <p className="text-sm md:text-base text-gray-500 max-w-2xl mx-auto font-medium px-4">

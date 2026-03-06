@@ -18,17 +18,18 @@ export function Navbar() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center py-4">
           {/* Logo */}
-          <div className="flex items-center gap-1 sm:gap-2">
-            <div className="w-8 h-8 sm:w-10 sm:h-10 bg-primary rounded-lg flex items-center justify-center">
-              <span className="text-white font-serif text-sm sm:text-lg font-bold">U</span>
-            </div>
-            <span className="font-serif font-bold text-sm sm:text-lg text-primary">upscguide</span>
+          <div className="flex items-center">
+            <img 
+              src="/uglogo.png" 
+              alt="UPSC Guide Logo" 
+              className="h-12 sm:h-16 object-contain"
+            />
           </div>
 
           {/* Desktop Menu */}
           <div className="hidden md:flex items-center gap-6 lg:gap-8">
             <a href="#preparation-phases" className="text-foreground hover:text-primary text-sm font-medium transition-colors">
-              Study Phases
+              Preparation Phases
             </a>
             <a href="#why-choose-us" className="text-foreground hover:text-primary text-sm font-medium transition-colors">
               Why Choose Us
@@ -42,8 +43,8 @@ export function Navbar() {
           </div>
 
           <div className="hidden md:flex items-center gap-3 lg:gap-6">
-            <a href="tel:+919876543210" className="text-primary font-semibold text-sm hover:text-accent transition-colors hidden lg:block">
-              +91 98765 43210
+            <a href="tel:+917887888819" className="text-primary font-semibold text-sm hover:text-accent transition-colors hidden lg:block">
+              +91 788 788 8819
             </a>
             <div className="flex items-center gap-2">
               <Button
@@ -74,7 +75,7 @@ export function Navbar() {
                 className="text-foreground hover:text-primary text-sm font-medium p-2 rounded-lg hover:bg-gray-50 transition-colors"
                 onClick={() => setMobileMenuOpen(false)}
               >
-                Study Phases
+                Preparation Phases
               </a>
               <a
                 href="#why-choose-us"
@@ -106,11 +107,11 @@ export function Navbar() {
               </Button>
 
               <a
-                href="tel:+919876543210"
+                href="tel:+917887888819"
                 className="text-primary font-bold text-center py-4 bg-secondary/50 rounded-xl mt-2"
                 onClick={() => setMobileMenuOpen(false)}
               >
-                Call: +91 98765 43210
+                Call: +91 788 788 8819
               </a>
             </div>
           </div>

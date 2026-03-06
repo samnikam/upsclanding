@@ -15,7 +15,7 @@ export function BannerSection() {
                         <Trophy className="text-accent w-4 h-4 md:w-5 md:h-5 lg:w-6 lg:h-6" />
                         <h2 className="text-white text-sm md:text-xl lg:text-3xl font-black uppercase tracking-wide md:tracking-widest flex items-center gap-2 md:gap-3">
                             <span className="hidden sm:inline-block w-8 md:w-12 h-0.5 bg-accent/50 rounded-full"></span>
-                            India's First UPSC Academy
+                            Learn from the India's Best Faculties & UPSC Toppers!
                             <span className="hidden sm:inline-block w-8 md:w-12 h-0.5 bg-accent/50 rounded-full"></span>
                         </h2>
                         <Trophy className="text-accent w-4 h-4 md:w-5 md:h-5 lg:w-6 lg:h-6" />

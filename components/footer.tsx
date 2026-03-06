@@ -9,10 +9,12 @@ export function Footer() {
           {/* About */}
           <div className="space-y-3 md:space-y-4">
             <div className="flex items-center gap-2">
-              <div className="w-8 h-8 md:w-10 md:h-10 bg-accent rounded-lg flex items-center justify-center">
-                <span className="text-primary font-serif text-base md:text-lg font-bold">U</span>
-              </div>
-              <span className="font-serif font-bold text-base md:text-lg">upscguide</span>
+              <img 
+                src="/uglogo.png" 
+                alt="UPSC Guide Logo" 
+                className="w-8 h-8 md:w-10 md:h-10 object-contain"
+              />
+              <span className="font-serif font-bold text-base md:text-lg">UPSC GUIDE</span>
             </div>
             <p className="text-white/80 leading-relaxed text-sm md:text-base">
               India's most trusted UPSC Guide platform with 5,000+ successful selections and proven track record of excellence.
@@ -24,12 +26,12 @@ export function Footer() {
             <h3 className="font-bold text-base md:text-lg">Quick Links</h3>
             <ul className="space-y-2 text-white/80 text-sm md:text-base">
               <li>
-                <a href="#courses" className="hover:text-accent transition-colors">
-                  Our Courses
+                <a href="#preparation-phases" className="hover:text-accent transition-colors">
+                  Preparation Phases
                 </a>
               </li>
               <li>
-                <a href="#about" className="hover:text-accent transition-colors">
+                <a href="#why-choose-us" className="hover:text-accent transition-colors">
                   Why Choose Us
                 </a>
               </li>
@@ -39,7 +41,7 @@ export function Footer() {
                 </a>
               </li>
               <li>
-                <a href="#contact" className="hover:text-accent transition-colors">
+                <a href="#enquiry-form" className="hover:text-accent transition-colors">
                   Contact Us
                 </a>
               </li>
@@ -80,7 +82,7 @@ export function Footer() {
               <div className="flex items-start gap-2 md:gap-3">
                 <Phone size={18} className="flex-shrink-0 mt-1 text-accent md:w-5 md:h-5" />
                 <div>
-                  <p className="font-semibold text-white text-sm md:text-base">+91 98765 43210</p>
+                  <p className="font-semibold text-white text-sm md:text-base">+91 788 788 8819</p>
                   <p className="text-xs md:text-sm">Mon-Fri 9AM-6PM IST</p>
                 </div>
               </div>

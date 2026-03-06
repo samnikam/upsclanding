@@ -96,6 +96,23 @@ export function HeroSection() {
                 </div>
               ))}
             </div>
+
+            {/* YouTube Video */}
+            <div className="w-full max-w-md space-y-2">
+              <h3 className="text-sm md:text-base font-semibold text-[#002147]">
+                Watch Our Academy Introduction
+              </h3>
+              <div className="relative w-full aspect-video rounded-lg overflow-hidden shadow-md bg-gray-100">
+                <iframe
+                  className="absolute top-0 left-0 w-full h-full"
+                  src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+                  title="UPSC Academy Introduction"
+                  frameBorder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  allowFullScreen
+                ></iframe>
+              </div>
+            </div>
           </div>
 
           {/* Right Side - Form Optimized with Top/Bottom Bars */}

@@ -1,34 +1,38 @@
-import { Award, TrendingUp, Users, Zap, Star, ShieldCheck } from 'lucide-react';
+import Image from 'next/image';
 
 export function TrustBar() {
   const stats = [
     {
-      icon: Star,
-      value: '4.9/5',
-      label: 'Student Rating',
-      description: 'Verified Reviews',
-      accent: 'text-yellow-500'
+      image: '/a.png',
+      value: '11 Lakhs+',
+      label: 'Students',
+      description: 'Trusted by',
+      accent: 'text-blue-500',
+      useIcon: false
     },
     {
-      icon: TrendingUp,
-      value: '2,847+',
-      label: 'Success Stories',
-      description: 'Last 5 Years',
-      accent: 'text-green-500'
+      image: '/b.png',
+      value: '3.5 Crore+',
+      label: 'Minutes',
+      description: 'Session Watched',
+      accent: 'text-blue-500',
+      useIcon: false
     },
     {
-      icon: Users,
-      value: '50,000+',
-      label: 'Aspirants',
-      description: 'Community Members',
-      accent: 'text-blue-500'
+      image: '/c.png',
+      value: '1.2 Crore+',
+      label: 'Attempted',
+      description: 'Questions',
+      accent: 'text-blue-500',
+      useIcon: false
     },
     {
-      icon: ShieldCheck,
-      value: '15+',
-      label: 'Years Legacy',
-      description: 'Of Trust & Quality',
-      accent: 'text-accent'
+      image: '/d.png',
+      value: '300+',
+      label: 'Lectures',
+      description: "Officer's Guest",
+      accent: 'text-blue-500',
+      useIcon: false
     }
   ];
 
@@ -54,8 +58,8 @@ export function TrustBar() {
                 <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-accent to-transparent transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500"></div>
 
                 <div className="flex items-center gap-3 md:gap-4">
-                  <div className={`w-10 h-10 md:w-12 md:h-12 rounded-xl md:rounded-2xl bg-slate-50 flex items-center justify-center group-hover:scale-110 transition-transform duration-300 ${stat.accent.replace('text-', 'bg-').replace('500', '50')}`}>
-                    <Icon className={stat.accent} size={20} />
+                  <div className={`w-12 h-12 md:w-14 md:h-14 rounded-xl md:rounded-2xl bg-slate-50 flex items-center justify-center group-hover:scale-110 transition-transform duration-300 ${stat.accent.replace('text-', 'bg-').replace('500', '50')}`}>
+                    <Image src={stat.image!} alt="" width={32} height={32} className="object-contain" />
                   </div>
                   <div className="space-y-0.5">
                     <p className="text-xl md:text-2xl font-black text-primary tracking-tight">

@@ -7,6 +7,7 @@ import { TrustBar } from '@/components/trust-bar';
 import { WhyChooseUs } from '@/components/why-choose-us';
 import { EducatorsSection } from '@/components/educators-section';
 import { TestimonialsSection } from '@/components/testimonials-section';
+import { OfficersTestimonials } from '@/components/officers-testimonials';
 import { FaqSection } from '@/components/faq-section';
 import { PreparationPhases } from '@/components/preparation-phases';
 import { Footer } from '@/components/footer';
@@ -32,6 +33,7 @@ export default function Home() {
         <EducatorsSection />
         <PreparationPhases />
         <TestimonialsSection />
+        <OfficersTestimonials />
         <FaqSection />
         <Footer />
         <StickyBottomBar />
