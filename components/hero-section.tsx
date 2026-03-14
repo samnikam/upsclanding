@@ -80,6 +80,23 @@ export function HeroSection() {
               </p>
             </div>
 
+            {/* Strong CTAs Above the Fold */}
+            <div className="flex flex-col sm:flex-row gap-3 md:gap-4">
+              <Button 
+                onClick={() => document.getElementById('enquiry-form')?.scrollIntoView({ behavior: 'smooth' })}
+                className="bg-[#002147] hover:bg-[#001a38] text-white font-bold px-6 md:px-8 py-3 md:py-4 rounded-lg text-sm md:text-base transition-all shadow-lg flex items-center justify-center gap-2 flex-1"
+              >
+                Book Free Counselling
+                <ArrowRight className="w-4 h-4" />
+              </Button>
+              <Button 
+                onClick={() => window.open('tel:+917887888819', '_self')}
+                className="bg-accent hover:bg-accent/90 text-[#002147] font-bold px-6 md:px-8 py-3 md:py-4 rounded-lg text-sm md:text-base transition-all shadow-lg flex items-center justify-center gap-2 flex-1"
+              >
+                Call Now: 788 788 8819
+              </Button>
+            </div>
+
             {/* Quick Benefits - Minimalist */}
             <div className="grid gap-3 md:gap-5">
               {[
