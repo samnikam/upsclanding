@@ -6,39 +6,39 @@ import { MessageCircle } from 'lucide-react';
 const educators = [
     {
         name: "Akshay Kadam Sir",
-        role: "Indian Polity & Governance",
-        details: "Indian Polity & Governance Expert",
+        subject: "Ethics & Indian Society",
+        credentials: ["4 Mains 2 Interviews", "10 Years+ Experience"],
         image: "/akshay-kadam.png"
     },
     {
         name: "Jawwad Kazi Sir",
-        role: "History Specialist",
-        details: "History (Ancient, Medieval & Modern India)",
+        subject: "History, Art & Culture, IR",
+        credentials: ["MBA & PGDMM", "15 Years+ Experience"],
         image: "/jawwad-kazi.png"
     },
     {
-        name: "Sumit Konde Sir",
-        role: "Geography & Environment",
-        details: "Geography & Environment Expert",
-        image: "/sumit-kondesir.png"
-    },
-    {
         name: "Dr. Kaustubh Bondre Sir",
-        role: "Economy Specialist",
-        details: "Economy Expert",
+        subject: "Geography",
+        credentials: ["MBBS from GMCH Nagpur", "3 Interview + 4 Mains", "9 Years + Experience"],
         image: "/kaustubh-bondre.png"
     },
     {
-        name: "Harshal Patil Sir",
-        role: "Science & Technology",
-        details: "Science & Technology Expert",
-        image: "/harshal-patil.png"
+        name: "Ramesh Shingade Sir",
+        subject: "Polity",
+        credentials: ["5 Mains 3 Interviews", "10 Years + Experience"],
+        image: "/ramesh-shingade.png"
     },
     {
-        name: "Ramesh Shingade Sir",
-        role: "Current Affairs & CSAT",
-        details: "Current Affairs & CSAT Specialist",
-        image: "/ramesh-shingade.png"
+        name: "Sumit Konde Sir",
+        subject: "Geography & Environment",
+        credentials: ["8 Years+ Experience"],
+        image: "/sumit-kondesir.png"
+    },
+    {
+        name: "Harshal Patil Sir",
+        subject: "Economy",
+        credentials: ["AIR 833, UPSC CSE | AIR 84, UPSC CAPF", "Given 5 CSE Interview & 6 Mains", "7 Years+ Experience"],
+        image: "/harshal-patil.png"
     }
 ];
 
@@ -71,27 +71,21 @@ export function EducatorsSection() {
                                 </div>
                             </div>
 
-                            {/* Name Badge */}
-                            <div className="relative -mt-6 md:-mt-8 z-10 flex items-center justify-center">
-                                <div className="flex items-stretch shadow-lg rounded-md overflow-hidden">
-                                    {/* Main Light Blue Background */}
-                                    <div className="bg-blue-50 py-1.5 px-4 md:py-2 md:px-5 lg:px-6 border-2 border-blue-100">
-                                        <h3 className="text-xs md:text-sm lg:text-base font-bold text-[#0B1F4E] text-center whitespace-nowrap">
-                                            {educator.name}
-                                        </h3>
-                                    </div>
-                                </div>
-                            </div>
-
                             {/* Details */}
-                            <div className="mt-4 md:mt-6 text-center space-y-1.5 md:space-y-2 px-2">
-                                <p className="text-[#0B1F4E] text-[10px] md:text-xs font-semibold opacity-80 uppercase tracking-tight">
-                                    {educator.role}
+                            <div className="mt-4 md:mt-5 text-center space-y-1 px-2">
+                                <h3 className="text-sm md:text-base lg:text-lg font-bold text-[#0B1F4E]">
+                                    {educator.name}
+                                </h3>
+                                <p className="text-[#0B1F4E] text-xs md:text-sm italic font-medium">
+                                    {educator.subject}
                                 </p>
-                                <div className="h-px w-6 bg-[#F5A623]/40 mx-auto"></div>
-                                <p className="text-[#0B1F4E] text-xs md:text-sm font-bold leading-tight max-w-[200px] md:max-w-[220px] mx-auto">
-                                    {educator.details}
-                                </p>
+                                <div className="space-y-0.5 pt-1">
+                                    {educator.credentials.map((line, i) => (
+                                        <p key={i} className="text-gray-600 text-[11px] md:text-xs font-medium leading-snug">
+                                            {line}
+                                        </p>
+                                    ))}
+                                </div>
                             </div>
                         </div>
                     ))}
